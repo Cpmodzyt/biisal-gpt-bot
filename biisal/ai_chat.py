@@ -53,7 +53,7 @@ async def help(client, query):
     await client.copy_message(
         chat_id=query.message.chat.id,
         from_chat_id='itzcpbotlogs',
-        message_id=3326,
+        message_id=3335,
         reply_markup=InlineKeyboardMarkup(btn)
     )
         
@@ -78,7 +78,7 @@ async def back_start(client, query):
         InlineKeyboardButton('Information ✨', callback_data='information')
     ],[
         InlineKeyboardButton('Help ☘️', callback_data='help'),
-        InlineKeyboardButton('Updates 〽️', url='https://t.me/FilmZone_official')
+        InlineKeyboardButton('Updates 〽️', url='https://t.me/FilmZone_Official')
     ],[
         InlineKeyboardButton('Owner ⭕', url='https://t.me/Itzmecp')
     ]]
@@ -280,7 +280,7 @@ async def telegraph_upload(client, message):
                     [
                         InlineKeyboardButton(
                             "Updates 〽️",
-                            url=f"https://t.me/FilmZone_Official",
+                            url=f"https://t.me/FilmZone_talk",
                         )
                     ]
                 ]
