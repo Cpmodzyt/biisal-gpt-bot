@@ -43,33 +43,37 @@ async def startcmd(client, message):
     return
 
 
-
 @Client.on_callback_query(filters.regex(r'^help'))
 async def help(client, query):
     btn = [[
         InlineKeyboardButton('Back', callback_data='back_start')
     ]]
-    await query.message.delete()
-    await client.copy_message(
-        chat_id=query.message.chat.id,
-        from_chat_id='itzcpbotlogs',
-        message_id=3335,
-        reply_markup=InlineKeyboardMarkup(btn)
-    )
-        
+    text = """
+<b>✨ Usᴇs ᴏғ ᴄᴏᴍᴍᴀɴᴅs ✨
 
+• /bard - ɪғ ʏᴏᴜ ᴀʀᴇ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ ɪɴ ɢʀᴏᴜᴘ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴀsᴋ ᴀɴʏᴛʜɪɴɢ
+Ex: <code>/bard who is Best In the World</code>
+ɴᴏᴛᴇ : ɪɴ ᴘʀɪᴠᴀᴛᴇ ʏᴏᴜ ᴅᴏɴ'ᴛ ɴᴇᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜɪs
+
+• /scan_ph - Yᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ sᴄᴀɴ ᴀɴ ɪᴍᴀɢᴇ ᴀɴᴅ ʀᴇᴛʀɪᴇᴠᴇ ᴅᴇᴛᴀɪʟs ᴀʙᴏᴜᴛ ɪᴛ ғʀᴏᴍ ᴍᴇ. Tᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ, sɪᴍᴘʟʏ ᴜᴘʟᴏᴀᴅ ᴛʜᴇ ɪᴍᴀɢᴇ ғɪʀsᴛ. Aғᴛᴇʀ ᴛʜᴀᴛ, ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛʜᴇ ᴘʜᴏᴛᴏ ᴜsɪɴɢ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴀɴᴅ ᴀsᴋ ʏᴏᴜʀ ǫᴜᴇʀʏ
+Ex: <code>/scan_ph tell me about this img !</code></b>
+"""
+    await query.message.edit(text, reply_markup=InlineKeyboardMarkup(btn))
+
+        
 @Client.on_callback_query(filters.regex(r'^information'))
 async def information(client, query):
     btn = [[
         InlineKeyboardButton('Back', callback_data='back_start')
     ]]
-    await query.message.delete()
-    await client.copy_message(
-        chat_id=query.message.chat.id,
-        from_chat_id='itzcpbotlogs',
-        message_id=3332,
-        reply_markup=InlineKeyboardMarkup(btn)
-    )
+    text = """
+<b>Angel Ai Information ✨
+
+☘️ Welcome to Angel Ai Bot,
+
+ ⭕ A powerful AI chat bot created by @Itzmecp This bot is designed to engage with users in conversation, providing intelligent responses and assistance across various topics. 〽️</b>
+ """
+    await query.message.edit(text, reply_markup=InlineKeyboardMarkup(btn))
 
 
 @Client.on_callback_query(filters.regex(r'^back_start'))
@@ -82,9 +86,7 @@ async def back_start(client, query):
     ],[
         InlineKeyboardButton('Owner ⭕', url='https://t.me/Itzmecp')
     ]]
-    await query.message.delete()
-    await query.message.reply_photo(
-        photo="https://telegra.ph/file/e9082bc50bdab83da0eee.jpg",
+    await query.message.edit(
         caption=f"<b>✨ Hey {userMention},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
         reply_markup=InlineKeyboardMarkup(btn)
     )
