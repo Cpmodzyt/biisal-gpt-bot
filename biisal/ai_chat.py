@@ -87,7 +87,7 @@ async def back_start(client, query):
         InlineKeyboardButton('Owner ⭕', url='https://t.me/Itzmecp')
     ]]
     await query.message.edit(
-        caption=f"<b>✨ Hey {query.from_user.mention()},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
+        text=f"<b>✨ Hey {query.from_user.mention()},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
         reply_markup=InlineKeyboardMarkup(btn)
     )
 
