@@ -27,11 +27,67 @@ async def startcmd(client, message):
         is_participant = await get_fsub(client, message)
         if not is_participant:
             return
+    btn = [[
+        InlineKeyboardButton('Information ✨', callback_data='information')
+    ],[
+        InlineKeyboardButton('Help ☘️', callback_data='help'),
+        InlineKeyboardButton('Updates 〽️', url='https://t.me/FilmZone_official')
+    ],[
+        InlineKeyboardButton('Owner ⭕', url='https://t.me/Itzmecp')
+    ]]
     await message.reply_photo(
         photo="https://telegra.ph/file/e9082bc50bdab83da0eee.jpg",
         caption=f"<b>✨ Hey {userMention},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
+        reply_markup=InlineKeyboardMarkup(btn)
     )
     return
+
+
+
+@Client.on_callback_query(filters.regex(r'^help'))
+async def help(client, query):
+    btn = [[
+        InlineKeyboardButton('Back', callback_data='back_start')
+    ]]
+    await query.message.delete()
+    await client.copy_message(
+        chat_id=query.message.chat.id,
+        from_chat_id='itzcpbotlogs',
+        message_id=3326,
+        reply_markup=InlineKeyboardMarkup(btn)
+    )
+        
+
+@Client.on_callback_query(filters.regex(r'^information'))
+async def information(client, query):
+    btn = [[
+        InlineKeyboardButton('Back', callback_data='back_start')
+    ]]
+    await query.message.delete()
+    await client.copy_message(
+        chat_id=query.message.chat.id,
+        from_chat_id='itzcpbotlogs',
+        message_id=3327,
+        reply_markup=InlineKeyboardMarkup(btn)
+    )
+
+
+@Client.on_callback_query(filters.regex(r'^back_start'))
+async def back_start(client, query):
+    btn = [[
+        InlineKeyboardButton('Information ✨', callback_data='information')
+    ],[
+        InlineKeyboardButton('Help ☘️', callback_data='help'),
+        InlineKeyboardButton('Updates 〽️', url='https://t.me/FilmZone_official')
+    ],[
+        InlineKeyboardButton('Owner ⭕', url='https://t.me/Itzmecp')
+    ]]
+    await message.reply_photo(
+        photo="https://telegra.ph/file/e9082bc50bdab83da0eee.jpg",
+        caption=f"<b>✨ Hey {userMention},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
+        reply_markup=InlineKeyboardMarkup(btn)
+    )
+
 
 
 async def ai_res(message, query):
