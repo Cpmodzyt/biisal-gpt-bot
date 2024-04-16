@@ -37,7 +37,7 @@ async def startcmd(client, message):
     ]]
     await message.reply_photo(
         photo="https://telegra.ph/file/e9082bc50bdab83da0eee.jpg",
-        caption=f"<b>✨ Hey {userMention},\nWelcome To Angel's World ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nMaintained By : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
+        caption=f"<b>✨ Hᴇʏ {userMention},\nWᴇʟᴄᴏᴍᴇ Tᴏ Aɴɢᴇʟ'ꜱ Wᴏʀʟᴅ ! ⭕\n\n<blockquote>Yᴏᴜ ᴄᴀɴ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ.I ᴄᴀɴ ʀᴇᴄᴀʟʟ ᴘʀᴇᴠɪᴏᴜs ᴄʜᴀᴛs ᴛᴏ ᴘᴇʀsᴏɴᴀʟɪᴢᴇ ʏᴏᴜʀ ᴇxᴘᴇʀɪᴇɴᴄᴇ, ᴍᴀᴋɪɴɢ ɪᴛ ᴍᴏʀᴇ\nʜᴜᴍᴀɴ-ʟɪᴋᴇ.\nʜᴏᴡ ᴄᴀɴ ɪ ᴀssɪsᴛ ʏᴏᴜ ?</blockquote>\n\nᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href=https://t.me/itzmecp>Itzmecp</a></b>",
         reply_markup=InlineKeyboardMarkup(btn)
     )
     return
