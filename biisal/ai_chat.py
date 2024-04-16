@@ -67,7 +67,7 @@ async def information(client, query):
     await client.copy_message(
         chat_id=query.message.chat.id,
         from_chat_id='itzcpbotlogs',
-        message_id=3327,
+        message_id=3332,
         reply_markup=InlineKeyboardMarkup(btn)
     )
 
