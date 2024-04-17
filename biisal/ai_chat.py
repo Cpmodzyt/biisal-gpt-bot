@@ -104,7 +104,7 @@ async def ai_res(message, query):
             api_response = response_json.get("response")
             if len(query) <= 280:
                 await message.reply_text(
-                    text=f"<b>✨ Hello {userMention}\nʏᴏᴜʀ ǫᴜᴇʀʏ : <code>{query}</code>\n\n{BOT_NAME} :\n{api_response}</b>",
+                    text=f"<b>{BOT_NAME} :\n{api_response}</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -120,7 +120,7 @@ async def ai_res(message, query):
             else:
                 cut_query_str = query[:77]
                 await message.reply_text(
-                    text=f"<b>✨ Hello {userMention}\nʏᴏᴜʀ ǫᴜᴇʀʏ : <code>{cut_query_str}</code>\n\n{BOT_NAME} :\n{api_response}</b>",
+                    text=f"<b>{BOT_NAME} :\n{api_response}</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
