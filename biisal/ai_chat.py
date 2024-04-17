@@ -104,7 +104,7 @@ async def ai_res(message, query):
             api_response = response_json.get("response")
             if len(query) <= 280:
                 await message.reply_text(
-                    text=f"<b>{BOT_NAME} :\n{api_response}</b>",
+                    text=f"<b><blockquote>{BOT_NAME}</blockquote> :\n{api_response}</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -120,7 +120,7 @@ async def ai_res(message, query):
             else:
                 cut_query_str = query[:77]
                 await message.reply_text(
-                    text=f"<b>{BOT_NAME} :\n{api_response}</b>",
+                    text=f"<b><blockquote>{BOT_NAME}</blockquote> :\n{api_response}</b>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -156,7 +156,7 @@ async def grp_res(client, message):
     print(grp_query)
     if not grp_query:
         return await message.reply_text(
-            "<b>Example Use:\n<code>/bol Who is lord krshna??</code>\n\nHope you got it.Try it now..</b>"
+            "<b>Example Use:\n<code>/bol Who is best in the world ??</code>\n\nHope you got it.Try it now..</b>"
         )
     current_time = time.time()
     coolDownUser = message.from_user.id
