@@ -15,10 +15,10 @@ AUTH_CHANNEL = int(
 )  # add your channel id for force subscribe
 FSUB = environ.get("FSUB", True)
 STICKERS_IDS = (
-    "CAACAgQAAxkBAAEK99dlfC7LDqnuwtGRkIoacot_dGC4zQACbg8AAuHqsVDaMQeY6CcRojME"
+    "CAACAgQAAxkBAAEL7dNmHyJg4uCQjCAIs3Tx-WYa51NpkgACFw4AAvXE-VP71ASLQkhrkzQE"
 ).split()
 COOL_TIMER = 20  # keep this atleast 20
 ONLY_SCAN_IN_GRP = environ.get(
     "ONLY_SCAN_IN_GRP", True
 )  # If IMG_SCAN_IN_GRP is set to True, image scanning is restricted to your support group only. If it's False, the image scanning feature can be used anywhere.
-REACTIONS = ["❤️‍🔥", "⚡", "🔥"]
+REACTIONS = ["😊", "⚡", "🧚", "❤"]
